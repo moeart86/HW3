@@ -1,0 +1,25 @@
+package gmailTest;
+
+import gmailVerify.Gmail;
+
+public class TestGmail {
+	
+	
+	public void testGmail() {
+	
+	
+	Gmail abc = new Gmail();
+	abc.openBroser();
+	abc.verifyPageTitle();
+	abc.verifyUrl();
+	abc.userName();
+	abc.passWord();
+	abc.signIn();
+	abc.verifySignIn();
+	abc.closeBrowser();
+	
+	
+	
+
+}
+}

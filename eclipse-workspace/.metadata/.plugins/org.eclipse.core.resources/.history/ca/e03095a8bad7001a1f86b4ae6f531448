@@ -1,0 +1,69 @@
+package gmailVerify;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+public class Gmail {
+	private static final String Reporter = null;
+	private static final String Assert = null;
+	String expectedURL = "https://accounts.google.com/login/identifier?flowName=GlifWebSignIn&flowEntry=AddSession";
+	WebDriver dr;
+	private Object expectedTitle;
+	
+	public void openBroser () {
+		try {
+		System.setProperty("webdriver.chrome.driver","/Users/moe/Downloads/chromedriver");// 
+		dr = new ChromeDriver(); 
+		dr.get("https://accounts.google.com/login/identifier?flowName=GlifWebSignIn&flowEntry=AddSession");	
+		Reporter.log("Chrome Browser launched")
+		
+		} catch (Exception e) {
+			Assert.fail("Chrome Browser Failed");
+		};
+	
+	
+	}
+	public void verifyPageTitle() {
+		String actualTitle = dr.getTitle();
+		Assert.assertEquals(actualTitle , expectedTitle);
+		Reporter.log("Title matched");
+			
+		
+	}
+	public void verifyUrl() {
+		String actualURL = dr.getCurrentUrl();
+		Assert.assertEquals(actualURL , expectedURL);
+		Reporter.log("URL matched");
+			
+		
+	}
+	public void userName() {
+		dr.findElement(By.className("whsOnd zHQkBf")).click();
+		
+		
+		
+		
+	}
+	public void passWord() {
+		dr.findElement(By.className("whsOnd zHQkBf")).click();
+		
+		
+	}
+	public void signIn() {
+		dr.findElement(By.className("whsOnd zHQkBf")).click();
+		
+	}
+	public void verifySignIn() {
+		
+		
+		String actualSignIn = dr..getSignIn();
+		Assert.assertEquals(actualURL , expectedURL);
+		Reporter.log("SignIN matched");
+	}
+	public void closeBrowser() {
+		dr.quit();
+	}
+}
+	

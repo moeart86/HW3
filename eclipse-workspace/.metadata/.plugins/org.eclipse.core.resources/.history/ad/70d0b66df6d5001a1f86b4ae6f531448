@@ -1,0 +1,44 @@
+package gmailVerify;
+
+
+public class Gmail {
+	
+	
+	public void openBroser () {
+		
+	
+	
+	}
+	public void verifyPageTitle() {
+		
+		
+	}
+	public void verifyUrl() {
+		
+		
+		
+		
+	}
+	public void userName() {
+		
+		
+		
+	}
+	public void passWord() {
+		
+		
+		
+	}
+	public void signIn() {
+		
+		
+	}
+	public void verifySignIn() {
+		
+		
+	}
+	public void closeBrowser() {
+		dr.quit 
+	}
+}
+	
